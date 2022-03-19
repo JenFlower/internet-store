@@ -1,124 +1,28 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
-  "extends": ["plugin:react/recommended", "airbnb-typescript", "airbnb", "prettier"],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "project": "./tsconfig.json",
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 12,
-    "sourceType": "module"
-  },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "paths": ["src"],
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
-    }
-  },
-  "rules": {
-    "@typescript-eslint/no-empty-function": "off",
-    "@typescript-eslint/no-shadow": "off",
-    "@typescript-eslint/no-unused-vars": ["error", { "ignoreRestSiblings": true }],
-    "consistent-return": "off",
-    "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": ["error"],
-    "import/extensions": "off",
-    "import/no-cycle": "off",
-    "import/no-extraneous-dependencies": "off",
-    "import/prefer-default-export": "off",
-    "jsx-a11y/anchor-is-valid": "off",
-    "linebreak-style": "off",
-    "no-nested-ternary": "off",
-    "no-plusplus": "off",
-    "no-shadow": "off",
-    "no-undef": "off",
-    "object-curly-spacing": ["error", "always"],
-    "object-shorthand": "error",
-    "react/jsx-props-no-spreading": "off",
-    "react/no-array-index-key": "off",
-    "react/no-unescaped-entities": "off",
-    "react/prop-types": "off",
-    "react/react-in-jsx-scope": "off",
-    "react/require-default-props": "off",
-    "react/jsx-curly-spacing": [
-      "error",
-      {
-        "when": "always",
-        "children": false
-      }
-    ],
-    "object-curly-newline": "off",
-    "no-unused-expressions": [
-      "error",
-      {
-        "allowShortCircuit": true,
-        "allowTernary": true,
-        "allowTaggedTemplates": true
-      }
-    ],
-    "import/no-unresolved": [
-      2,
-      {
+    "env": {
+        "browser": true,
         "commonjs": true,
-        "amd": true
-      }
-    ],
-    "react/jsx-filename-extension": [
-      1,
-      {
-        "extensions": [".js", ".jsx", "tsx"]
-      }
-    ],
-    "import/order": [
-      "error",
-      {
-        "groups": ["builtin", "external", "parent", "internal", "sibling", "index", "object"],
-        "pathGroups": [
-          {
-            "pattern": "assets",
-            "group": "sibling",
-            "position": "before"
-          },
-          {
-            "pattern": "helpers",
-            "group": "sibling",
-            "position": "before"
-          },
-          {
-            "pattern": "store/**",
-            "group": "sibling",
-            "position": "before"
-          },
-          {
-            "pattern": "interfaces/**",
-            "group": "sibling",
-            "position": "before"
-          },
-          {
-            "pattern": "pages",
-            "group": "sibling",
-            "position": "before"
-          },
-          {
-            "pattern": "components/**",
-            "group": "sibling",
-            "position": "before"
-          },
-          {
-            "pattern": "components",
-            "group": "sibling",
-            "position": "before"
-          }
+        "es2021": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 13,
+        "sourceType": "module",
+        "allowImportExportEverywhere": true
+    },
+    "rules": {
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
         ]
-      }
-    ],
-    "jsx-quotes": ["error", "prefer-single"]
-  }
+    }
 }
